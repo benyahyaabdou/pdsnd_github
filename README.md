@@ -15,4 +15,5 @@ Then if Washington is chosen, the code print that there are no gender and age da
 Bikeshare.py, chicago.csv, new_york_city.csv, washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Udacity's Nanodegree Program: Programming for Data Science. <https://www.udacity.com/>
+"Nanodegree" is a registered trademark of Udacity. © 2011–2019 Udacity, Inc.
