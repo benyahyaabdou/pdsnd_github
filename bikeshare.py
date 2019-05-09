@@ -12,9 +12,9 @@ while True:
     city = input('Please choose the city: chicago, new york city or washington:\n ').lower()
     if city in ['chicago', 'new york city', 'washington']:
         break
-    else: print('There must be an error, as {} is not accepted, please rewrite again chicago, or new york city or washington:\n'.format(city))
+    else: print('There must be an error, as {} is not accepted\n'.format(city))
 print('you have choosen {}'.format(city))
-#Asking the user to choose the filter month, day or none 
+#Asking the user to choose the filter month, day or none
 while True:
     filter = input('Would you like to filter the data by month, day, or none?\n').lower()
     if filter in ['month', 'day', 'none']:
@@ -60,7 +60,7 @@ if day != 'all':
     df = df[df['day_of_week'] == day.title()]
 
 df['hour'] = df['Start Time'].dt.hour
-#calculating the popular month, day and hour which was inlcuded in exercise 
+#calculating the popular month, day and hour which was inlcuded in exercise
 popular_month = df['month'].mode()[0]
 popular_day_of_week=df['day_of_week'].mode()[0]
 popular_hour = df['hour'].mode()[0]
@@ -85,7 +85,7 @@ print("\nThis took %s seconds." % (time.time() - start_time))
 #this was the most difficult part to complete, I found that we can combine two row in one and then use mode
 df['combined stations']= df['Start Station'] + df['End Station']
 popular_station3 = df['combined stations'].mode()[0]
-print ('most frequent combination of start station and end station trip:\n', popular_station3)
+print ('most frequent combination of start station and end station trip:\n {}'.format(popular_station3))
 print("\nThis took %s seconds." % (time.time() - start_time))
 print('-'*40)
 print('\nCalculating Trip Duration...\n')
@@ -93,11 +93,11 @@ start_time = time.time()
 total_travel_time = df['Trip Duration'].sum()
 print('Total travel time for {} is {}\n'.format(city, total_travel_time))
 print("\nThis took %s seconds." % (time.time() - start_time))
-print('-'*40)    
+print('-'*40)
 mean_travel_time = df['Trip Duration'].mean()
 print('Mean travel time for {} is {}\n'.format(city, mean_travel_time))
 print("\nThis took %s seconds." % (time.time() - start_time))
-print('-'*40)    
+print('-'*40)
 #calcultion of User Stats
 print('\nCalculating User Stats...\n')
 start_time = time.time()
@@ -105,7 +105,7 @@ count_type = df['User Type'].value_counts()
 print('The number of user by types is as fellow:\n', count_type)
 if city == 'washington':
     print('there are no age and gender based data for washington')
-else: 
+else:
     gender_count = df['Gender'].value_counts()
     print('The distribution of customers by gender is as such\n', gender_count)
     earliest_birth = df['Birth Year'].min()
@@ -128,6 +128,5 @@ while True:
         break
     else:
         i += 5
-        print(df.iloc[i:i+5])       
-print ('Thanks, it is now completed!')            
-
+        print(df.iloc[i:i+5])
+print ('Thanks, it is now completed!')
