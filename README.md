@@ -12,7 +12,7 @@ When this first condition is realized, the code asks if the data should be filte
 Then if Washington is chosen, the code print that there are no gender and age data. Otherwise, it gives the data per age and gender. Then the code asks user if they want to display individual data. When it has displayed, there is a loop that will ask to display the next information until the user answer no.
 
 ### Files used
-Include the files used
+Bikeshare.py, chicago.csv, new_york_city.csv, washington.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
