@@ -85,7 +85,7 @@ print("\nThis took %s seconds." % (time.time() - start_time))
 #this was the most difficult part to complete, I found that we can combine two row in one and then use mode
 df['combined stations']= df['Start Station'] + df['End Station']
 popular_station3 = df['combined stations'].mode()[0]
-print ('most frequent combination of start station and end station trip:\n', popular_station3)
+print ('most frequent combination of start station and end station trip:\n {}'.format(popular_station3))
 print("\nThis took %s seconds." % (time.time() - start_time))
 print('-'*40)
 print('\nCalculating Trip Duration...\n')
